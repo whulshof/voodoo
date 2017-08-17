@@ -25,7 +25,7 @@ DEFAULT_CONF = {
     "shared_eggs": True,
     "shared_gems": True,
     "odoo": "https://github.com/oca/ocb.git",
-    "template": "https://github.com/akretion/voodoo-template.git",
+    "template": "https://github.com/whulshof/voodoo-template.git",
     "maintainer_quality_tools":
         "https://github.com/OCA/maintainer-quality-tools",
     "env": "dev",
@@ -35,7 +35,7 @@ DOCKER_COMPOSE_PATH = 'docker-compose.yml'
 
 import logging
 
-client = docker.from_env()
+client = docker.from_env(version='auto')
 
 logger = logging.getLogger('voodoo')
 formatter = logging.Formatter("%(message)s")
