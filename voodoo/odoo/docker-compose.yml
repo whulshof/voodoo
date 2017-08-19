@@ -44,7 +44,7 @@ services:
     links:
       - db
   db:
-    image: akretion/voodoo-postgresql
+    image: postgres:9.6
     environment:
     - POSTGRES_USER=odoo
     - POSTGRES_DB=db
@@ -56,7 +56,7 @@ services:
     expose: 1080
     image: akretion/lightweight-mailcatcher
   odoo:
-    image: akretion/voodoo:latest
+    image: magnuscolors/voodoo:latest
     expose: 8069
     environment:
     - PYTHONDONTWRITEBYTECODE=True
